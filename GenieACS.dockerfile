@@ -8,8 +8,6 @@ RUN apt-get update && apt-get install -y sudo supervisor git
 RUN mkdir -p /var/log/supervisor
 
 #RUN npm install -g --unsafe-perm genieacs@1.2.0
-WORKDIR /opt
-RUN git clone https://github.com/genieacs/genieacs.git -b master
 WORKDIR /opt/genieacs
 RUN npm install
 RUN npm run build
